@@ -1,13 +1,14 @@
 .meal-card {
   grid-column: auto;
   grid-row: 2;
-  min-height: 31.25rem;
-  padding-bottom: 2.5rem;
+  min-height: 30rem;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
-  background-color: #EDEFEE;
+  background-color: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .meal-card:hover .meal-card-image img {
@@ -22,7 +23,7 @@
   transition: all ease-in-out 0.3s;
 }
 
-.meal-card-header, 
+.meal-card-header,
 .meal-card-body-footer {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -55,14 +56,16 @@
   font-weight: bold;
 }
 
-.meal-card-body-footer svg {
-  margin-left: 0.5rem;
+.meal-card-body-footer-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /*-- Media queries ------------------------------------------------------*/
 
 @media (max-width: 960px) {
-.meal-card {
-  grid-row: auto;
-}
+  .meal-card {
+    grid-row: auto;
+  }
 }
