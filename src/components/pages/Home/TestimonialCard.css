@@ -1,7 +1,7 @@
 .testimonial-card {
   grid-column: auto;
   grid-row: 2;
-  min-height: 22.75rem;
+  min-height: 18rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -27,8 +27,8 @@
 /*-- Media queries ------------------------------------------------------*/
 
 @media (max-width: 949px) {
-.testimonial-card {
-  grid-column: auto;
-  grid-row: auto;
-}
+  .testimonial-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
