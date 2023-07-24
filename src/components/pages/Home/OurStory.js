@@ -1,5 +1,5 @@
-import chefsMarioAndAdrianAImage from './assets/chefs-mario-and-adrian_a.jpg';
-import chefsMarioAndAdrianBImage from './assets/chefs-mario-and-adrian_b.jpg';
+import chefsMarioAndAdrianAImage from './assets/mario_and_adrian_a.png';
+import restaurantchefB from './assets/restaurant-chef-B.png';
 import './OurStory.css';
 
 const OurStory = () => {
@@ -9,24 +9,12 @@ const OurStory = () => {
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut 
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-          inventore veritatis et quasi architecto beatae vitae dicta sunt 
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
-          voluptatem sequi nesciunt.
+          Little Lemon Chicago is a family owned Mediterranean restaurant located in the heart of the city. The restaurant is run by brothers Mario and Adrian, who have always had a passion for cooking and serving delicious food. Growing up in a Mediterranean household, the brothers were exposed to traditional recipes from an early age, and they decided to bring those recipes to the masses with a modern twist. At Little Lemon, you can expect to find a menu full of classic dishes with a creative twist that makes them stand out from the rest. Whether you're looking for a quick lunch or a leisurely dinner, Little Lemon Chicago is the perfect place to indulge in a delicious meal in a cozy and welcoming atmosphere.
         </p>
       </div>
       <div className="our-story-chefs">
-        <img src={chefsMarioAndAdrianAImage} alt="Chefs Mario and Adrian" />
-        <img src={chefsMarioAndAdrianBImage} alt="Chefs Mario and Adrian" />
+        <img src={restaurantchefB} alt="Chefs Mario and Adrian" className="our-story-chefs-1" />
+        <img src={chefsMarioAndAdrianAImage} alt="Chefs Mario and Adrian" className="our-story-chefs-2" />
       </div>
     </section>
   );
