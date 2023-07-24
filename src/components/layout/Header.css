@@ -24,6 +24,9 @@
 
 .nav-bar-hamburger:hover {
   background-color: #F4CE14;
+  height: 0.5rem;
+  margin-top: 2rem;
+
 }
 
 .nav-bar-links {
@@ -54,12 +57,16 @@
   padding-bottom: 1.5rem;
   text-transform: uppercase;
   transition: background-color 0.5s;
+  height: 0.5rem;
+  margin-top: 2rem;
 }
 
 .current-location, 
 .nav-bar-links a:hover, 
 .nav-bar-links a:focus {
   background-color: #F4CE14;
+  height: 0.5rem;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 992px) {
