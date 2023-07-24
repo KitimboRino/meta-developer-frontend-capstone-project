@@ -1,4 +1,4 @@
-import chefsMarioAndAdrianAImage from './assets/chefs-mario-and-adrian_a.jpg';
+import chefsMarioAndAdrianAImage from './assets/mario_and _adrian_a.png';
 import restaurantchefB from './assets/restaurant-chef-B.png';
 import './OurStory.css';
 
