@@ -5,17 +5,18 @@ import { fetchAPI, submitAPI } from '../../../utils/fakeAPI';
 import pages from '../../../utils/pages';
 import BookingForm from './BookingForm';
 
+const today = new Date();
 const updateTimes = (availableTimes, date) => {
   const response = fetchAPI(new Date(date));
-  return (response.length !== 0) ? response : availableTimes; 
+  return (response.length !== 0) ? response : availableTimes;
 };
 
-const initializeTimes = initialAvailableTimes => 
-  [...initialAvailableTimes, ...fetchAPI(new Date())];
+const initializeTimes = initialAvailableTimes =>
+  [...initialAvailableTimes, ...fetchAPI(today)];
 
 const Bookings = () => {
   const [
-    availableTimes, 
+    availableTimes,
     dispatchOnDateChange
   ] = useReducer(updateTimes, [], initializeTimes);
   const navigate = useNavigate();
@@ -23,15 +24,15 @@ const Bookings = () => {
   const submitData = formData => {
     const response = submitAPI(formData);
     if (response) navigate(pages.get('confirmedBooking').path);
-  }; 
+  };
 
   return (
     <div className="bookings">
       <h2>Table reservation</h2>
-      <BookingForm 
-        availableTimes={availableTimes} 
-        dispatchOnDateChange={dispatchOnDateChange} 
-        submitData={submitData} 
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatchOnDateChange={dispatchOnDateChange}
+        submitData={submitData}
       />
     </div>
   );
