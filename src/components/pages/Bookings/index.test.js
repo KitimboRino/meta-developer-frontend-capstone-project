@@ -15,12 +15,12 @@ describe('Booking page', () => {
     const timeOptions = await screen.findAllByTestId('booking-time-option');
 
     expect(timeOptions.length).toBeGreaterThanOrEqual(1);
-    timeOptions.forEach(timeOption => 
+    timeOptions.forEach(timeOption =>
       expect(timeOption.value).toMatch(timeFormat)
     );
   });
 
-  test('should update available booking time options when changing booking date', async() => {
+  test('should update available booking time options when changing booking date', async () => {
     render(
       <MemoryRouter>
         <Bookings />
@@ -35,14 +35,12 @@ describe('Booking page', () => {
     const updatedTimeOptions = await screen.findAllByTestId('booking-time-option');
 
     expect(dateInput).toHaveValue(bookingDate);
-    initialTimeOptions.forEach(timeOption => 
+    initialTimeOptions.forEach(timeOption =>
       expect(timeOption.value).toMatch(timeFormat)
     );
-    updatedTimeOptions.forEach(timeOption => 
+    updatedTimeOptions.forEach(timeOption =>
       expect(timeOption.value).toMatch(timeFormat)
     );
     expect(initialTimeOptions.length).not.toBe(updatedTimeOptions.length);
   });
-
-  //test('', () => {});
 });

@@ -17,7 +17,7 @@ describe('Booking form', () => {
     const timeOptions = await screen.findAllByTestId('booking-time-option');
     const numberOfGuestsInput = screen.getByLabelText(/Number of guests/);
     const occasionSelect = screen.getByLabelText(/Occasion/);
-    const occasionOptions = await screen.findAllByTestId(`booking-occasion-option`);
+    const occasionOptions = await screen.findAllByTestId('booking-occasion-option');
     const submitButton = screen.getByRole('button');
 
     expect(dateInput).toBeInTheDocument();
@@ -51,22 +51,20 @@ describe('Booking form', () => {
     const submitButton = screen.getByRole('button');
     fireEvent.click(submitButton);
 
-    expect(submitData).toHaveBeenCalledWith({ 
-      date: today, 
-      time: availableTimes[0], 
-      numberOfGuests: 1, 
-      occasion: 'Birthday', 
+    expect(submitData).toHaveBeenCalledWith({
+      date: today,
+      time: availableTimes[0],
+      numberOfGuests: 1,
+      occasion: 'Birthday',
     });
   });
 
-  test(
-    `should display an error message and disable sumbit button when date 
-    field's value is empty`, () => {
+  test('should display an error message and disable submit button when date field\'s value is empty', () => {
     render(
-      <BookingForm 
-        availableTimes={availableTimes} 
-        dispatchOnDateChange={dispatchOnDateChange} 
-        submitData={submitData} 
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatchOnDateChange={dispatchOnDateChange}
+        submitData={submitData}
       />
     );
 
@@ -81,14 +79,12 @@ describe('Booking form', () => {
     expect(submitButton).toBeDisabled();
   });
 
-  test(
-    `should display an error message and disable sumbit button when number of  
-    guests field's value is empty`, () => {
+  test('should display an error message and disable submit button when number of guests field\'s value is empty', () => {
     render(
-      <BookingForm 
-        availableTimes={availableTimes} 
-        dispatchOnDateChange={dispatchOnDateChange} 
-        submitData={submitData} 
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatchOnDateChange={dispatchOnDateChange}
+        submitData={submitData}
       />
     );
 
